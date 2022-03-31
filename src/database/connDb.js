@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
-const { local_db } = require('./urlDb');
+const { local_db, cloud_db } = require('./urlDb');
 
 class ConnDb {
     constructor() {
-        this.conn = mongoose.connection();
+        this.connection();
     }
 
     async connection() {
-        this.conn = await mongoose.connect(local_db);
+        this.conn = await mongoose.connect(cloud_db);
     }
 }
 

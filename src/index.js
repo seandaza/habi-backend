@@ -1,4 +1,5 @@
 const express = require('express');
+const ConnDb = require('./database/connDb');
 
 class Server{
     constructor(){ 
