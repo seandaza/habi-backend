@@ -1,5 +1,5 @@
-const user = 'usuario';
-const password = 'admin';
+let user = process.env.USER;
+let password = process.env.PASS;
 const database  = "db_habi";
 
 module.exports = {

@@ -1,8 +1,13 @@
 const express = require('express');
+//Configurar variables de entorno
+require ('dotenv').config();
+
+// importar modulos
 const ConnDb = require('./database/connDb');
 
 class Server{
-    constructor(){ 
+    constructor(){
+
         this.objConn = new ConnDb();
         // Crear aplicacion express
         this.app = express();
