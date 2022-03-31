@@ -2,8 +2,13 @@ const express = require('express');
 
 class Server{
     constructor(){ 
+        this.objConn = new ConnDb();
         // Crear aplicacion express
         this.app = express();
+        this.config();
+    }
+
+    config(){
         // Indicar el procesamiento de datos en formato json durante las peticiones
         this.app.use(express.json());
         // Almacenar el puerto en el que se ejecutara el servidor
