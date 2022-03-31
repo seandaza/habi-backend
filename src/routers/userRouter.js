@@ -15,6 +15,7 @@ class UserRouter{
 
         //crear y configurar endpoints o apis
         this.router.post('/user', objuserC.register);
+        this.router.post('/user/login', objuserC.login);
     }
 }
 
