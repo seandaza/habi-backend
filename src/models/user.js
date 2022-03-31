@@ -5,7 +5,7 @@ const userSchema = Schema({
         type: String,
     },
     telephone: {
-        type: number,
+        type: Number,
     },
     email: {
         type: String,
