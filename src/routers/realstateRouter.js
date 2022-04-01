@@ -19,4 +19,5 @@ class RealstateRouter{
     }
 }
 
+
 module.exports = RealstateRouter;
