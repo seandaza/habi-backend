@@ -6,7 +6,7 @@ class TokenController {
 
     }
 
-    getToken = () => {
+    getToken = (req) => {
 
         let token = null;
         let authorization = req.headers.authorization;

@@ -15,6 +15,7 @@ class RealstateRouter{
 
         //Configurar rutas
         this.router.post('/realstate', realstateC.create);
+        this.router.put('/realstate', realstateC.update);
     }
 }
 
