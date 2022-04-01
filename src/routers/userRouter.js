@@ -6,11 +6,11 @@ class UserRouter{
         //Crear objeto de tipo Router y asignarlo como atributo de la clase
         this.router = Router();
         //Configurar las rutas
-        this.config();
+        this.#config();
         
     }
 
-    config(){
+    #config(){
         const objuserC = new UserController();
 
         //crear y configurar endpoints o apis

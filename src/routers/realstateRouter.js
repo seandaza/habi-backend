@@ -1,0 +1,21 @@
+const {Router} = require('express');
+const RealstateController = require('../controllers/realstateController');
+
+class RealstateRouter{
+
+    constructor(){
+        this.router = Router();
+        this.#config();
+    }
+
+    // #---> Crear metodo privado
+    #config(){
+        //Construir objeto
+        const realstateC = new RealstateController();
+
+        //Configurar rutas
+        this.router.post('/realstate', realstateC.create);
+    }
+}
+
+module.exports = RealstateRouter;

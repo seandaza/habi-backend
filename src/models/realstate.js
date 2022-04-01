@@ -1,6 +1,6 @@
-const {schemma, model} = require('mongoose');
+const {Schema, model} = require('mongoose');
 
-const realstateSchema = schema({
+const realstateSchema = Schema({
     area: {
         type: Number,
     },
@@ -11,6 +11,9 @@ const realstateSchema = schema({
         type: Number,
     },
     address: {
+        type: String,
+    },
+    user_id: {
         type: String,
     }
 },{
