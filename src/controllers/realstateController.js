@@ -94,6 +94,19 @@ class RealstateController {
             }
         });
     }
+    //Agregar metodo para obtener todos los inmuebles que sera una ruta publica
+    get = (req, res)=> {
+    Realstate.find({}, (error, data) => {
+        if (error) {
+            res.status(500).json({ error });
+        } else {
+            res.status(200).json({ info: data });
+        }
+    });
+}
+
+
+
 }
 
 module.exports = RealstateController;

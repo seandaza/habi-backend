@@ -6,6 +6,17 @@ class TokenController {
 
     }
 
+    verifyAuth = (req, res, next) => {
+        const token = this.getToken(req);
+        jwt.verify(token, process.env.JWT_SECRET_KEY, (error, data) => {
+            if (error) {
+                res.status(401).json({ info: 'Unauthorized access' });
+            } else {
+                next();
+            }
+        });
+    }
+
     getToken = (req) => {
 
         let token = null;
