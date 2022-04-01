@@ -14,7 +14,9 @@ class TokenController {
         if (authorization != null && authorization != undefined) {
 
             //Obtener el token del header
-            let token = authorization.split(' ')[1];
+            let arrayAuth = authorization.split(" ");        
+            token = arrayAuth[1];
+
 
 
         }
